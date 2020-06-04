@@ -1,6 +1,6 @@
 <?php
 session_start();
-require "array.php";
+
 
 class user {
     public $name;
