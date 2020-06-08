@@ -2,11 +2,6 @@
 
 require "db.php";
 
-// if ( !isset($user->isAdmin()) or !isset($user->isManager()) ){
-// header("Location: /error404/");
-// }
-// else 
-// {
 $query = "SELECT * FROM users";
 $req = mysqli_query($connection, $query);
 ?>

@@ -2,9 +2,8 @@
 
 if($_POST["selector"]){
 
-    // $_POST["selector"] = false;
     $newLang = $_POST["lang"];
-    $user = changeLang($user, $newLang);
+    $user = changeLang($_SESSION, $newLang);
 }
 if($_POST["exit"]){ 
 

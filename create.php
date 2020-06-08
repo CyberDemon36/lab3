@@ -9,7 +9,7 @@ if( $_SESSION["role"] == "1" ){
         ,'{$_POST["name"]}','{$_POST["surname"]}','{$_POST["lang"]}','{$_POST["role"]}')";
 
         if(mysqli_query($connection,$query)){
-            // header("Location: roles/".strtolower($user->getLang()).".php");
+            
             echo "Successful user creation";
         }
         else {

@@ -16,10 +16,7 @@ class user {
         $this->role = $role;
         $this->lang = $lang;
     }
-    // public function getRole()
-    // {
-    //     return $this->role;
-    // }
+    
     public function getLang()
     {
         return $this->lang;
@@ -111,17 +108,17 @@ function auth($arr)
         return new client($arr["lang"],"Client",$arr["name"],$arr["surname"]);
     }
 }
-function changeLang($user, $newLang) 
+function changeLang($array, $newLang) 
 {
     
-    if ($user->role == "Admin"){
-        return new admin($newLang, $user->role, $user->name, $user->surname);
+    if ($array["role"] == "1"){
+        return new admin($newLang, "Admin", $array["name"], $array["surname"]);
     }
-    else if ($user->role == "Manager"){
-        return new manager($newLang, $user->role, $user->name, $user->surname);
+    else if ($array["role"] == "2"){
+        return new manager($newLang, "Manager", $array["name"], $array["surname"]);
     }
-    else if ($user->role == "Client"){
-        return new client($newLang, $user->role, $user->name, $user->surname);
+    else if ($array["role"] == "3"){
+        return new client($newLang, "Client", $array["name"], $array["surname"]);
     }
 }
 ?>

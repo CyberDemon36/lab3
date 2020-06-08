@@ -9,7 +9,4 @@ if(mysqli_connect_errno()){
 
 mysqli_query($connection, "SET NAMES utf8");
 
-// $query = "SELECT * FROM users WHERE login='$LOGIN' and password='$PASSWORD'";
-// $result = mysqli_query($connection, $query) or die(mysqli_error($connection));
-
 ?>
